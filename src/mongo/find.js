@@ -14,14 +14,14 @@ module.exports = function(query, collectionName, cb) {
     }
     else {
 
-      collection.findOne(query, function(err, result) {
+      collection.find(query).toArray( function(err, results) {
 
         if (err) {
           cb(err, null);
         }
         else {
-          result && cb(null, result);
-          !result && cb('{"error": "Data Not found"}', null);
+          results.length > 0 && cb(null, results);
+          !results.length && cb('{"error": "Data Not found"}', null);
         }
 
         //Close connection

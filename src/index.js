@@ -4,11 +4,14 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var md5 = require('md5');
 var logger = require('./logger');
+var mqtt = require('./mqtt');
 var insert = require('./mongo/insert');
 var findOne = require('./mongo/findOne');
 var risks = require('../risks');
 var app = express();
 var port = '8080';
+
+mqtt();
 
 app.use(bodyParser.json()); // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({ // to support URL-encoded bodies
