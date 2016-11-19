@@ -1,0 +1,80 @@
+[{
+  "name": "Cologne City Center",
+  "geo": "50.9378597,6.9502884",
+  "radius": "2",
+  "type": "life",
+  "when": false,
+  "where": true,
+  "city": "Cologne"
+},
+{
+  "name": "Cologne Kalk",
+  "geo": "50.9364657,6.978666",
+  "radius": "2km",
+  "type": "life",
+  "when": false,
+  "where": true,
+  "city": "Cologne"
+},
+{
+  "name": "Cologne Ehrenfeld",
+  "geo": "50.9668768,6.8542453",
+  "radius": "2km",
+  "type": "life",
+  "when": false,
+  "where": true,
+  "city": "Cologne"
+},
+{
+  "name": "Cologne Junkesdorf",
+  "geo": "50.9197578,6.8439196",
+  "radius": "2km",
+  "type": "life",
+  "when": false,
+  "where": true,
+  "city": "Cologne"
+},{
+  "name": "Cologne Nippes",
+  "geo": "50.9630002,6.9461686",
+  "radius": "2km",
+  "type": "life",
+  "when": false,
+  "where": true,
+  "city": "Cologne"
+},{  "name": "Cologne Deutz",
+  "geo": "50.9332646,6.9772393",
+  "radius": "2km",
+  "type": "life",
+  "when": false,
+  "where": true,
+  "city": "Cologne"
+},{  "name": "Cologne Zollstock",
+  "geo": "50.9042906,6.9211163",
+  "radius": "2km",
+  "type": "life",
+  "when": false,
+  "where": true,
+  "city": "Cologne"
+},{  "name": "Cologne Rodenkirchen",
+  "geo": "50.8769857,6.9467246",
+  "radius": "12km",
+  "type": "life",
+  "when": false,
+  "where": true,
+  "city": "Cologne"
+},{
+"name": "Cologne Müngesdorf",
+  "geo": "50.9384001,6.8518519",
+  "radius": "2km",
+  "type": "life",
+  "when": false,
+  "where": true,
+  "city": "Cologne"
+},{  "name": "Cologne Mülheim",
+    "geo": "50.9806872,6.9947973",
+    "radius": "2km",
+    "type": "life",
+    "when": false,
+    "where": true,
+    "city": "Cologne"
+}]

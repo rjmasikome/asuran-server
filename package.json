@@ -1,0 +1,18 @@
+{
+  "name": "asuran-server",
+  "version": "1.0.0",
+  "description": "Server for Asuran, smart Insurance On Demand that activate based on the location and time",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "RJ Masikome",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "md5": "^2.2.1",
+    "mongodb": "^2.2.11",
+    "winston": "^2.3.0"
+  }
+}
