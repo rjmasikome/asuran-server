@@ -7,6 +7,7 @@ var logger = require('./logger');
 var mqtt = require('./mqtt');
 var insert = require('./mongo/insert');
 var findOne = require('./mongo/findOne');
+var find = require('./mongo/find');
 var risks = require('../risks');
 var app = express();
 var port = '8080';
@@ -33,6 +34,38 @@ app.post('/getRisk', function (req, res) {
   //   res.send(response);
   // });
 });
+
+app.get('/getSummary', function (req, res) {
+  find({where: true}, "risks", function(err, results) {
+    if (!err) {
+      var obj = [{name: "car", children:[]},{name: "house", children:[]},{name: "life", children:[]}];
+      results.forEach(function(n){
+        if(n.type === "car") {
+          n.status = true;
+          obj[0].status = true;
+          obj[0].children.push(n);
+        } else if(n.type === "house") {
+          n.status = true;
+          obj[1].status = true;
+          obj[1].children.push(n);
+        } else if(n.type === "life") {
+          n.status = true;
+          obj[2].status = true; 
+          obj[2].children.push(n);
+        }
+      });
+      res.send(obj);
+    }
+    else {
+      logger.log('error', err);
+      res.send(err);
+    }
+  });
+  // localGenerator(req.body.url, req.body.context, function (response) {
+  //   res.send(response);
+  // });
+});
+
 
 app.post('/setRisk', function (req, res) {
   // res.send(req.body);
