@@ -39,13 +39,13 @@ app.post('/setRisk', function (req, res) {
   risks.forEach(function(n, i, arr) {
     if (n.where) {
       var now = new Date();
-      n.start= new Date();
-      n.end = new Date(now.setFullYear(now.getFullYear() + 20));
+      n.start= new Date().getTime();
+      n.end = new Date(now.setFullYear(now.getFullYear() + 20)).getTime();
     }
     if (n.when) {
       var now = new Date();
-      n.start = new Date();
-      n.end = new Date(now.setMinutes(now.getMinutes() + 5));
+      n.start = new Date().getTime();
+      n.end = new Date(now.setMinutes(now.getMinutes() + 5)).getTime();
     }
     insert(n, "risks", function(err, result){
       if (!err) {
