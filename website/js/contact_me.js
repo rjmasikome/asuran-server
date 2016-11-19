@@ -30,7 +30,7 @@ $(function() {
 
 
             $.ajax({
-                url: "http://localhost:8080/setUser",
+                url: "http://104.154.82.27:8080/setUser",
                 type: "POST",
                 data: sendObj,
                 cache: false,

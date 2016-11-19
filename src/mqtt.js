@@ -3,7 +3,7 @@
 var mqtt = require('mqtt');
 var logger = require("./logger");
 var find = require("./mongo/find");
-var client  = mqtt.connect('mqtt://test.mosquitto.org');
+var client  = mqtt.connect('tcp://broker.hivemq.com');
 
 module.exports = function() {
 
@@ -15,7 +15,7 @@ module.exports = function() {
         if (!err) {
           results.forEach(function(n, index) {
             setTimeout(function() {
-              client.publish('asuran-geo', n.geo);
+              client.publish('asuran-geo', JSON.stringify(n));
             }, index*1000);
           });
         }
