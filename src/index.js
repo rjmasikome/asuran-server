@@ -35,7 +35,7 @@ app.post('/getRisk', function (req, res) {
   // });
 });
 
-app.get('/getSummary', function (req, res) {
+app.post('/calculateSummary', function (req, res) {
   find({where: true}, "risks", function(err, results) {
     if (!err) {
       var obj = [{name: "car", children:[]},{name: "house", children:[]},{name: "life", children:[]}];
@@ -50,7 +50,7 @@ app.get('/getSummary', function (req, res) {
           obj[1].children.push(n);
         } else if(n.type === "life") {
           n.status = true;
-          obj[2].status = true; 
+          obj[2].status = true;
           obj[2].children.push(n);
         }
       });
