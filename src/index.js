@@ -36,10 +36,14 @@ app.post('/getRisk', function (req, res) {
 });
 
 app.post('/calculateSummary', function (req, res) {
+  logger.log('info', req.body);
   find({where: true}, "risks", function(err, results) {
     if (!err) {
       var obj = [{name: "car", children:[]},{name: "house", children:[]},{name: "life", children:[]}];
       results.forEach(function(n){
+        req.body.disable.forEach(function(element) {
+          delete n[element];
+        });
         if(n.type === "car") {
           n.status = true;
           obj[0].status = true;
