@@ -1,5 +1,5 @@
 [{
-    "name": "Robbery in City Center (near Dom)",
+    "name": "City Center (near Dom)",
     "latitude": "50.9378597",
     "longitude": "6.9502884",
     "radius": "2000",
@@ -89,7 +89,7 @@
     "where": true,
     "city": "cologne"
 }, {
-    "name": "Accident in Mülheim",
+    "name": "DB Mülheim",
     "latitude": "50.9806872",
     "longitude": "6.9947973",
     "radius": "1400",
@@ -159,7 +159,7 @@
     "where": false,
     "city": "cologne"
 }, {
-    "name": "Swimming Accident",
+    "name": "Swimming Pool ",
     "latitude": "50.939201",
     "longitude": "6.959762",
     "type": "life",
@@ -169,7 +169,7 @@
     "premium": 10,
     "city": "cologne"
 }, {
-    "name": "Getting lost in the wood",
+    "name": "Swimming pool near Dom",
     "latitude": "50.939201",
     "longitude": "6.959762",
     "type": "life",
@@ -177,13 +177,6 @@
     "when": false,
     "where": true,
     "premium": 15,
-    "city": "cologne"
-}, {
-    "name": "Terminal Sickness",
-    "premium": 80,
-    "type": "life",
-    "when": false,
-    "where": true,
     "city": "cologne"
 }, {
     "name": "Cologne Center",
@@ -218,16 +211,6 @@
     "city": "cologne"
 
 }, {
-    "name": "AutoBahn KM4 Köln-Bonn",
-    "premium": 15,
-    "latitude": "50.9532731",
-    "longitude": "6.9511404",
-    "radius": "300",
-    "when": false,
-    "where": true,
-    "type": "car",
-    "city": "cologne"
-}, {
     "name": "AutoBahn KM10 Köln-Düsseldorf",
     "premium": 10,
     "latitude": "50.862751",
@@ -236,16 +219,6 @@
     "when": false,
     "where": true,
     "type": "car",
-    "city": "cologne"
-}, {
-    "name": "AutoBahn KM30 Köln-Düsseldorf",
-    "premium": 5,
-    "type": "car",
-    "latitude": "51.071841",
-    "longitude": "6.986713",
-    "when": false,
-    "where": true,
-    "radius": "300",
     "city": "cologne"
 }, {
     "name": "AutoBahn KM12 Bonn-Koblenz",
