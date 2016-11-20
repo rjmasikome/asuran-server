@@ -186,7 +186,7 @@
     "where": true,
     "city": "cologne"
 }, {
-    "name": "Roberry",
+    "name": "Cologne Center",
     "latitude": "50.9392073",
     "longitude": "6.9575195",
     "type": "house",
@@ -196,7 +196,7 @@
     "premium": 30,
     "city": "cologne"
 }, {
-    "name": "Disaster",
+    "name": "Cologne Ehrenfeld",
     "status": false,
     "latitude": "50.9392073",
     "longitude": "6.9575195",
