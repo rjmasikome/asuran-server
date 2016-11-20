@@ -12,6 +12,8 @@ module.exports = function(id, set, collectionName, cb) {
       _id: id
     };
 
+    console.log(set);
+
     if (err) {
       console.log('Unable to connect to the mongoDB server. Error:', err);
     }
@@ -25,7 +27,7 @@ module.exports = function(id, set, collectionName, cb) {
         }
         else {
           var successObj  = {
-            id:  obj._id,
+            id:  id,
             collection: collectionName,
             set: set,
             msg: "Update Success"

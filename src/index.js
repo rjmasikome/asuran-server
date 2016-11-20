@@ -8,6 +8,8 @@ var mqtt = require('./mqtt');
 var insert = require('./mongo/insert');
 var findOne = require('./mongo/findOne');
 var find = require('./mongo/find');
+var update = require('./mongo/update');
+var checkCities = require('./helper/checkCities');
 var risks = require('../risks');
 var app = express();
 var port = '8080';
@@ -35,53 +37,93 @@ app.post('/getRisk', function (req, res) {
   // });
 });
 
+app.post('/setAddress', function(){
+
+  if(req.body.address && req.body.id) {
+    var set = {
+      $set: {
+        address: req.body.address
+      }
+    };
+    update(req.body.id, set, "users", function(err, success) {
+      if (!err) {
+        res.send(success);
+        logger.log('info', success);
+      }
+      else {
+        res.send(err);
+        logger.log('error', err);
+      }
+    });
+  }
+  else {
+    var errMsg = {error: "error", msg:"No address or id defined"}
+    res.send(err);
+    logger.log('error', errMsg);
+  }
+});
+
 app.post('/calculateSummary', function (req, res) {
+
+  var tokens;
+  var summaryFound = false;
+
   logger.log('info', req.body);
-  find({where: true}, "risks", function(err, results) {
-    if (!err) {
-      var obj = [{name: "car", children:[]},{name: "house", children:[]},{name: "life", children:[]}];
-      results.forEach(function(n){
-        if(req.body.address && req.body.id) {
-          var set = {
-            $set: {
-              address: req.body.address
-            }
-          };
-          update(req.body.id, req.body.collection, set, function(err, success) {
+
+  if (req.body.address) {
+    tokens = req.body.address.split(" ");
+    tokens.forEach(function(n, i, arr) {
+      checkCities(n, function(err, cityName) {
+
+        if (!err) {
+          summaryFound = true;
+          find({where: true, city: cityName}, "risks", function(err, results) {
             if (!err) {
-              logger.log('info', success);
+              var obj = [{name: "car", children:[]},{name: "house", children:[]},{name: "life", children:[]}];
+              results.forEach(function(n){
+                if(req.body.disable){
+                  req.body.disable.forEach(function(element) {
+                    delete n[element];
+                  });
+                }
+                if(n.type === "car") {
+                  n.status = true;
+                  obj[0].status = true;
+                  obj[0].children.push(n);
+                } else if(n.type === "house") {
+                  n.status = true;
+                  obj[1].status = true;
+                  obj[1].children.push(n);
+                } else if(n.type === "life") {
+                  n.status = true;
+                  obj[2].status = true;
+                  obj[2].children.push(n);
+                }
+              });
+              res.send(obj);
             }
             else {
               logger.log('error', err);
+              res.send(err);
             }
           });
         }
-        if(req.body.disable){
-          req.body.disable.forEach(function(element) {
-            delete n[element];
-          });
-        }
-        if(n.type === "car") {
-          n.status = true;
-          obj[0].status = true;
-          obj[0].children.push(n);
-        } else if(n.type === "house") {
-          n.status = true;
-          obj[1].status = true;
-          obj[1].children.push(n);
-        } else if(n.type === "life") {
-          n.status = true;
-          obj[2].status = true;
-          obj[2].children.push(n);
+
+        if (i === arr.length - 1) {
+          if (!summaryFound) {
+            var errObj = {
+              error: "Error",
+              msg: "Your city is not yet in our database, coming soon"
+            }
+            logger.log('error', errObj);
+            res.send(errObj);
+          }
         }
       });
-      res.send(obj);
-    }
-    else {
-      logger.log('error', err);
-      res.send(err);
-    }
-  });
+    });
+  }
+
+
   // localGenerator(req.body.url, req.body.context, function (response) {
   //   res.send(response);
   // });
