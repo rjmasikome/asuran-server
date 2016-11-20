@@ -1,5 +1,5 @@
 [{
-    "name": "Cologne City Center",
+    "name": "Robbery in City Center",
     "latitude": "50.9378597",
     "longitude": "6.9502884",
     "radius": "2000",
@@ -9,7 +9,7 @@
     "where": true,
     "city": "cologne"
 }, {
-    "name": "Cologne Kalk",
+    "name": "Murder in Kalk",
     "latitude": "50.9364657",
     "longitude": "6.978666",
     "radius": "1200",
@@ -19,7 +19,7 @@
     "where": true,
     "city": "cologne"
 }, {
-    "name": "Cologne Ehrenfeld",
+    "name": "Lost in Ehrenfeld",
     "latitude": "50.9668768",
     "longitude": "6.8542453",
     "radius": "1750",
@@ -29,7 +29,7 @@
     "where": true,
     "city": "cologne"
 }, {
-    "name": "Cologne Junkesdorf",
+    "name": "Accident in Junkesdorf",
     "latitude": "50.9197578",
     "longitude": "6.8439196",
     "radius": "900",
@@ -39,7 +39,7 @@
     "where": true,
     "city": "cologne"
 }, {
-    "name": "Cologne Nippes",
+    "name": "Robbery in Nippes",
     "latitude": "50.9630002",
     "longitude": "6.9461686",
     "radius": "1400",
@@ -49,7 +49,7 @@
     "where": true,
     "city": "cologne"
 }, {
-    "name": "Cologne Deutz",
+    "name": "Wallet lost in Deutz",
     "latitude": "50.9332646",
     "longitude": "6.9772393",
     "radius": "1100",
@@ -59,7 +59,7 @@
     "where": true,
     "city": "cologne"
 }, {
-    "name": "Cologne Zollstock",
+    "name": "Wallet lost in Zollstock",
     "latitude": "50.9042906",
     "longitude": "6.9211163",
     "radius": "1350",
@@ -69,7 +69,7 @@
     "where": true,
     "city": "cologne"
 }, {
-    "name": "Cologne Rodenkirchen",
+    "name": "Accident in Rodenkirchen",
     "latitude": "50.8769857",
     "longitude": "6.9467246",
     "radius": "1200",
@@ -79,7 +79,7 @@
     "where": true,
     "city": "cologne"
 }, {
-    "name": "Cologne Müngesdorf",
+    "name": "Robbery in Müngesdorf",
     "latitude": "50.9384001",
     "longitude": "6.8518519",
     "radius": "1150",
@@ -89,7 +89,7 @@
     "where": true,
     "city": "cologne"
 }, {
-    "name": "Cologne Mülheim",
+    "name": "Accident in Mülheim",
     "latitude": "50.9806872",
     "longitude": "6.9947973",
     "radius": "1400",
