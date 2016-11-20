@@ -41,9 +41,11 @@ app.post('/calculateSummary', function (req, res) {
     if (!err) {
       var obj = [{name: "car", children:[]},{name: "house", children:[]},{name: "life", children:[]}];
       results.forEach(function(n){
-        req.body.disable.forEach(function(element) {
-          delete n[element];
-        });
+	if(req.body.disable){
+          req.body.disable.forEach(function(element) {
+            delete n[element];
+          });
+        }
         if(n.type === "car") {
           n.status = true;
           obj[0].status = true;
