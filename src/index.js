@@ -41,7 +41,22 @@ app.post('/calculateSummary', function (req, res) {
     if (!err) {
       var obj = [{name: "car", children:[]},{name: "house", children:[]},{name: "life", children:[]}];
       results.forEach(function(n){
-	if(req.body.disable){
+        if(req.body.address && req.body.id) {
+          var set = {
+            $set: {
+              address: req.body.address
+            }
+          };
+          update(req.body.id, req.body.collection, set, function(err, success) {
+            if (!err) {
+              logger.log('info', success);
+            }
+            else {
+              logger.log('error', err);
+            }
+          });
+        }
+        if(req.body.disable){
           req.body.disable.forEach(function(element) {
             delete n[element];
           });

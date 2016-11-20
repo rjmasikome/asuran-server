@@ -22,8 +22,12 @@ module.exports = function(obj, collectionName, cb) {
           cb(err, null);
         }
         else {
-          var successMsg = "Successful inserting user " + obj._id;
-          cb(null, successMsg);
+          var successObj  = {
+            id:  obj._id,
+            collection: collectionName,
+            msg: "Insert Success"
+          }
+          cb(null, successObj);
         }
 
         //Close connection
