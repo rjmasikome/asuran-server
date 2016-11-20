@@ -1,5 +1,5 @@
 [{
-    "name": "Robbery in City Center",
+    "name": "Robbery in City Center (near Dom)",
     "latitude": "50.9378597",
     "longitude": "6.9502884",
     "radius": "2000",
@@ -9,7 +9,7 @@
     "where": true,
     "city": "cologne"
 }, {
-    "name": "Murder in Kalk",
+    "name": "Music Store Kalk",
     "latitude": "50.9364657",
     "longitude": "6.978666",
     "radius": "1200",
@@ -19,7 +19,7 @@
     "where": true,
     "city": "cologne"
 }, {
-    "name": "Lost in Ehrenfeld",
+    "name": "Club Bahnhof Ehrenfeld",
     "latitude": "50.9668768",
     "longitude": "6.8542453",
     "radius": "1750",
@@ -29,7 +29,7 @@
     "where": true,
     "city": "cologne"
 }, {
-    "name": "Accident in Junkesdorf",
+    "name": "Student Apartment Junkesdorf",
     "latitude": "50.9197578",
     "longitude": "6.8439196",
     "radius": "900",
@@ -39,7 +39,7 @@
     "where": true,
     "city": "cologne"
 }, {
-    "name": "Robbery in Nippes",
+    "name": "Pasha",
     "latitude": "50.9630002",
     "longitude": "6.9461686",
     "radius": "1400",
@@ -49,7 +49,7 @@
     "where": true,
     "city": "cologne"
 }, {
-    "name": "Wallet lost in Deutz",
+    "name": "Messe/ Deutz",
     "latitude": "50.9332646",
     "longitude": "6.9772393",
     "radius": "1100",
@@ -59,7 +59,7 @@
     "where": true,
     "city": "cologne"
 }, {
-    "name": "Wallet lost in Zollstock",
+    "name": "Garden Zollstock",
     "latitude": "50.9042906",
     "longitude": "6.9211163",
     "radius": "1350",
@@ -69,7 +69,7 @@
     "where": true,
     "city": "cologne"
 }, {
-    "name": "Accident in Rodenkirchen",
+    "name": "U-bahn stop Rodenkirchen",
     "latitude": "50.8769857",
     "longitude": "6.9467246",
     "radius": "1200",
@@ -79,7 +79,7 @@
     "where": true,
     "city": "cologne"
 }, {
-    "name": "Robbery in Müngesdorf",
+    "name": "Rhein Energie Stadion",
     "latitude": "50.9384001",
     "longitude": "6.8518519",
     "radius": "1150",
