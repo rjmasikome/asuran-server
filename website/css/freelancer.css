@@ -81,8 +81,8 @@ header img {
 }
 header .intro-text .name {
   display: block;
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 700;
+  font-family: Serif;
+  font-weight: 300;
   font-size: 2em;
 }
 header .intro-text .skills {
@@ -198,11 +198,29 @@ img.img-android-2{
   position: absolute;
   top: 40px;
   right: -80px;
+  z-index: 2;
 }
 
 img.img-google-play{
   height: 52px;
 }
+
+img.img-intro {
+  position: absolute;
+  top: 50px;
+  left: 170px;
+  z-index: 1;
+  width: 270px;
+}
+
+img.img-detection{
+  position: absolute;
+  top: 90px;
+  width: 270px;
+  right: -12px;
+  z-index: 4;
+}
+
 
 a.btn-register-top {
   width: 50%;
