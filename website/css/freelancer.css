@@ -200,6 +200,18 @@ img.img-android-2{
   right: -80px;
 }
 
+img.img-google-play{
+  height: 66px;
+}
+
+a.btn-register-top {
+  width: 50%;
+  height: 60px;
+  font-size: 27px;
+  font-weight: bold;
+  line-height: 35px;
+}
+
 @media (max-width: 767px) {
   section {
     padding: 75px 0;
